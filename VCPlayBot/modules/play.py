@@ -680,7 +680,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"#⃣ Your requested song **queued** at position {position}!",
+            caption=f"#⃣ Lagu **{s_name}** antrian ke **{position}**!",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -702,7 +702,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="▶️ **Mainkan** Musik disini permintaan {} via Youtube 😜".format(
                 message.from_user.mention()
             ),
         )
@@ -850,7 +850,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="▶️ **Mainkan** Musik disini permintaan {} via Youtube 😜".format(
                 message.from_user.mention()
             ),
         )
